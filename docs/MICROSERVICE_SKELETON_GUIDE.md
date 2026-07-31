@@ -710,7 +710,7 @@ AUTH_SERVICE_API_KEY=
 
 # Mail
 MAIL_MAILER=log
-MAIL_FROM_ADDRESS="noreply@lavalite.org"
+MAIL_FROM_ADDRESS="noreply@example.com"
 MAIL_FROM_NAME="${APP_NAME}"
 
 # Redis (Optional)
@@ -749,7 +749,7 @@ RUN composer dump-autoload --optimize --no-dev
 # Stage 2: Production image
 FROM php:8.2-fpm-alpine
 
-LABEL maintainer="Lavalite Team <team@lavalite.org>"
+LABEL maintainer="Lavalite Team <team@example.com>"
 LABEL description="[SERVICE-NAME] microservice for Lavalite ERP"
 
 # Install system dependencies
@@ -1457,7 +1457,7 @@ CACHE_DRIVER=redis
 QUEUE_CONNECTION=redis
 
 # Auth Service
-AUTH_SERVICE_URL=https://auth.lavalite.org
+AUTH_SERVICE_URL=https://auth.example.com
 AUTH_SERVICE_API_KEY=your-production-api-key
 ```
 

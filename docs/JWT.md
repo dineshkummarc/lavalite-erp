@@ -39,7 +39,7 @@ The Lavalite multi-organization authentication microservice uses JWT (JSON Web T
 
 ```json
 {
-  "iss": "https://api.lavalite.org",           // Issuer
+  "iss": "https://api.example.com",           // Issuer
   "sub": 1,                                  // Subject (User ID)
   "iat": 1699876543,                         // Issued at (timestamp)
   "exp": 1699880143,                         // Expiration (timestamp)

@@ -285,10 +285,10 @@ All consolidated documentation follows these standards:
 
 ## 🆘 Getting Help
 
-- **📧 Email:** support@lavalite.org
+- **📧 Email:** support@example.com
 - **🐛 Issues:** https://github.com/lavalite/erp/issues
 - **💬 Discussions:** https://github.com/lavalite/erp/discussions
-- **📖 Docs:** https://docs.lavalite.org
+- **📖 Docs:** https://docs.example.com
 
 ---
 
