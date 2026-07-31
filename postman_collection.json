@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "lavalite-erp-api-v2",
 		"name": "Lavalite Core API - Complete Collection",
-		"description": "**Comprehensive API collection for Lavalite Multi-Organization ERP Core Microservice**\n\n## Features Covered:\n- 🔐 Authentication (JWT)\n- 👤 User Management\n- 🏢 Organizations\n- 🎭 Roles & Permissions\n- 👥 Teams\n- 📦 Modules\n- 💳 Billing\n- 🛡️ Security (2FA, Email Verification, Password Reset)\n\n## Base URL\n`http://localhost:8000/api`\n\n## Environment Variables Required:\n- `base_url` - API base URL\n- `jwt_token` - Auto-populated on login\n- `current_organization_id` - Auto-populated on login\n\n## Demo Credentials:\n- **Super Admin:** john@lavalite.org | password\n- **Moderator:** jane@lavalite.org | password\n- **User:** bob@lavalite.org | password\n\n**Version:** 2.0.0  \n**Last Updated:** November 13, 2025",
+		"description": "**Comprehensive API collection for Lavalite Multi-Organization ERP Core Microservice**\n\n## Features Covered:\n- 🔐 Authentication (JWT)\n- 👤 User Management\n- 🏢 Organizations\n- 🎭 Roles & Permissions\n- 👥 Teams\n- 📦 Modules\n- 💳 Billing\n- 🛡️ Security (2FA, Email Verification, Password Reset)\n\n## Base URL\n`http://localhost:8000/api`\n\n## Environment Variables Required:\n- `base_url` - API base URL\n- `jwt_token` - Auto-populated on login\n- `current_organization_id` - Auto-populated on login\n\n## Demo Credentials:\n- **Super Admin:** john@example.com | password\n- **Moderator:** jane@example.com | password\n- **User:** bob@example.com | password\n\n**Version:** 2.0.0  \n**Last Updated:** November 13, 2025",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"auth": {
@@ -86,7 +86,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"email\": \"john@lavalite.org\",\n  \"password\": \"password\",\n  \"organization_id\": \"9d5c88e7-a1b2-4c3d-9e8f-123456789abc\"\n}"
+							"raw": "{\n  \"email\": \"john@example.com\",\n  \"password\": \"password\",\n  \"organization_id\": \"9d5c88e7-a1b2-4c3d-9e8f-123456789abc\"\n}"
 						},
 						"url": {
 							"raw": "{{base_url}}/login",
@@ -194,7 +194,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n  \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9...\",\n  \"refresh_token\": \"new-refresh-token-string\",\n  \"token_type\": \"Bearer\",\n  \"expires_in\": 3600,\n  \"refresh_expires_in\": 1209600,\n  \"user\": {\n    \"id\": 1,\n    \"first_name\": \"John\",\n    \"last_name\": \"Doe\",\n    \"full_name\": \"John Doe\",\n    \"email\": \"john@lavalite.org\",\n    \"email_verified_at\": \"2025-11-01T10:00:00.000000Z\",\n    \"two_factor_enabled\": false,\n    \"two_factor_confirmed_at\": null\n  },\n  \"organization_id\": \"9d5c88e7-a1b2-4c3d-9e8f-123456789abc\",\n  \"roles\": [\"admin\", \"member\"],\n  \"permissions\": [\"manage-users\", \"view-reports\"]\n}"
+							"body": "{\n  \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9...\",\n  \"refresh_token\": \"new-refresh-token-string\",\n  \"token_type\": \"Bearer\",\n  \"expires_in\": 3600,\n  \"refresh_expires_in\": 1209600,\n  \"user\": {\n    \"id\": 1,\n    \"first_name\": \"John\",\n    \"last_name\": \"Doe\",\n    \"full_name\": \"John Doe\",\n    \"email\": \"john@example.com\",\n    \"email_verified_at\": \"2025-11-01T10:00:00.000000Z\",\n    \"two_factor_enabled\": false,\n    \"two_factor_confirmed_at\": null\n  },\n  \"organization_id\": \"9d5c88e7-a1b2-4c3d-9e8f-123456789abc\",\n  \"roles\": [\"admin\", \"member\"],\n  \"permissions\": [\"manage-users\", \"view-reports\"]\n}"
 						},
 						{
 							"name": "Invalid Token",
@@ -1192,7 +1192,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"email\": \"superadmin@lavalite.org\",\n  \"role\": \"member\"\n}"
+							"raw": "{\n  \"email\": \"superadmin@example.com\",\n  \"role\": \"member\"\n}"
 						},
 						"url": {
 							"raw": "{{base_url}}/organizations/:id/invite-user",
@@ -1930,7 +1930,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n  \"data\": {\n    \"id\": 1,\n    \"name\": \"Super Admin\",\n    \"slug\": \"superadmin\",\n    \"description\": \"System super administrator with full access\",\n    \"is_global\": true,\n    \"permissions_count\": 25,\n    \"users_count\": 3,\n    \"modules_count\": 5,\n    \"organization\": null,\n    \"permissions\": [\n      {\n        \"id\": 1,\n        \"name\": \"Manage Users\",\n        \"slug\": \"manage-users\",\n        \"description\": \"Create, update, delete users\"\n      },\n      {\n        \"id\": 2,\n        \"name\": \"Manage Roles\",\n        \"slug\": \"manage-roles\",\n        \"description\": \"Create, update, delete roles\"\n      },\n      {\n        \"id\": 3,\n        \"name\": \"Manage Organizations\",\n        \"slug\": \"manage-organizations\",\n        \"description\": \"Full organization management\"\n      }\n    ],\n    \"users\": [\n      {\n        \"id\": 1,\n        \"first_name\": \"John\",\n        \"last_name\": \"Doe\",\n        \"full_name\": \"John Doe\",\n        \"email\": \"john@lavalite.org\",\n        \"created_at\": \"2025-11-01T10:00:00.000000Z\",\n        \"pivot\": {\n          \"organization_id\": null,\n          \"created_at\": \"2025-11-01T10:05:00.000000Z\"\n        }\n      },\n      {\n        \"id\": 2,\n        \"first_name\": \"Jane\",\n        \"last_name\": \"Smith\",\n        \"full_name\": \"Jane Smith\",\n        \"email\": \"jane@lavalite.org\",\n        \"created_at\": \"2025-11-05T14:30:00.000000Z\",\n        \"pivot\": {\n          \"organization_id\": null,\n          \"created_at\": \"2025-11-05T14:35:00.000000Z\"\n        }\n      }\n    ],\n    \"modules\": [\n      {\n        \"id\": 1,\n        \"name\": \"User Management\",\n        \"slug\": \"user-management\"\n      },\n      {\n        \"id\": 2,\n        \"name\": \"Organization Management\",\n        \"slug\": \"organization-management\"\n      }\n    ]\n  }\n}"
+							"body": "{\n  \"data\": {\n    \"id\": 1,\n    \"name\": \"Super Admin\",\n    \"slug\": \"superadmin\",\n    \"description\": \"System super administrator with full access\",\n    \"is_global\": true,\n    \"permissions_count\": 25,\n    \"users_count\": 3,\n    \"modules_count\": 5,\n    \"organization\": null,\n    \"permissions\": [\n      {\n        \"id\": 1,\n        \"name\": \"Manage Users\",\n        \"slug\": \"manage-users\",\n        \"description\": \"Create, update, delete users\"\n      },\n      {\n        \"id\": 2,\n        \"name\": \"Manage Roles\",\n        \"slug\": \"manage-roles\",\n        \"description\": \"Create, update, delete roles\"\n      },\n      {\n        \"id\": 3,\n        \"name\": \"Manage Organizations\",\n        \"slug\": \"manage-organizations\",\n        \"description\": \"Full organization management\"\n      }\n    ],\n    \"users\": [\n      {\n        \"id\": 1,\n        \"first_name\": \"John\",\n        \"last_name\": \"Doe\",\n        \"full_name\": \"John Doe\",\n        \"email\": \"john@example.com\",\n        \"created_at\": \"2025-11-01T10:00:00.000000Z\",\n        \"pivot\": {\n          \"organization_id\": null,\n          \"created_at\": \"2025-11-01T10:05:00.000000Z\"\n        }\n      },\n      {\n        \"id\": 2,\n        \"first_name\": \"Jane\",\n        \"last_name\": \"Smith\",\n        \"full_name\": \"Jane Smith\",\n        \"email\": \"jane@example.com\",\n        \"created_at\": \"2025-11-05T14:30:00.000000Z\",\n        \"pivot\": {\n          \"organization_id\": null,\n          \"created_at\": \"2025-11-05T14:35:00.000000Z\"\n        }\n      }\n    ],\n    \"modules\": [\n      {\n        \"id\": 1,\n        \"name\": \"User Management\",\n        \"slug\": \"user-management\"\n      },\n      {\n        \"id\": 2,\n        \"name\": \"Organization Management\",\n        \"slug\": \"organization-management\"\n      }\n    ]\n  }\n}"
 						},
 						{
 							"name": "Organization Role Example",
