@@ -302,11 +302,11 @@ After seeding the database, you can use these credentials:
 
 | Email | Password | Organizations | Role |
 |-------|----------|---------|------|
-| globaladmin@lavalite.org | password | Acme (Admin), TechStart (Admin) | Global Admin |
-| superadmin@lavalite.org | password | Acme (Super Admin), TechStart (Super Admin) | Super Admin |
-| useradmin@lavalite.org | password | Acme (User Admin), TechStart (User Admin) | User Admin |
-| user@lavalite.org | password | Acme (User), TechStart (User) | User |
-| client@lavalite.org | password | Acme (Client), TechStart (Client) | Client |
+| globaladmin@example.com | password | Acme (Admin), TechStart (Admin) | Global Admin |
+| superadmin@example.com | password | Acme (Super Admin), TechStart (Super Admin) | Super Admin |
+| useradmin@example.com | password | Acme (User Admin), TechStart (User Admin) | User Admin |
+| user@example.com | password | Acme (User), TechStart (User) | User |
+| client@example.com | password | Acme (Client), TechStart (Client) | Client |
 
 ### Example Login Request
 
@@ -314,7 +314,7 @@ After seeding the database, you can use these credentials:
 curl -X POST http://localhost:8000/api/login \
   -H "Content-Type: application/json" \
   -d '{
-    "email": "globaladmin@lavalite.org",
+    "email": "globaladmin@example.com",
     "password": "password"
   }'
 ```
@@ -382,7 +382,7 @@ This project is open-sourced software licensed under the [MIT license](LICENSE).
 
 - **Issues:** [GitHub Issues](https://github.com/lavaliteerp/core/issues)
 - **Discussions:** [GitHub Discussions](https://github.com/lavaliteerp/core/discussions)
-- **Email:** team@lavalite.org
+- **Email:** team@example.com
 
 ---
 
