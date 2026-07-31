@@ -19,7 +19,7 @@ RUN composer dump-autoload --optimize --no-dev
 # Stage 2: Production image
 FROM php:8.2-fpm-alpine
 
-LABEL maintainer="Lavalite Team <team@lavalite.org>"
+LABEL maintainer="Lavalite Team <team@example.com>"
 LABEL description="Multi-tenant authorization microservice with JWT authentication"
 
 # Install system dependencies
