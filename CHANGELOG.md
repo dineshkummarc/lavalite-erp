@@ -194,7 +194,7 @@ For existing deployments:
   - `getAllPermissionsInOrganization()`: Returns both organization-specific and global
 
 #### Seeders
-- **DatabaseSeeder**: Added super admin user creation (`superadmin@lavalite.org`)
+- **DatabaseSeeder**: Added super admin user creation (`superadmin@example.com`)
 
 #### Documentation
 - **NEW**: `docs/GLOBAL_ROLES_PERMISSIONS.md` - Comprehensive 9-section guide
