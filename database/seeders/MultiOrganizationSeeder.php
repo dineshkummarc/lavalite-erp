@@ -147,7 +147,7 @@ class MultiOrganizationSeeder extends Seeder
             'id' => $globalAdminId,
             'first_name' => 'Global',
             'last_name' => 'Admin',
-            'email' => 'globaladmin@lavalite.org',
+            'email' => 'globaladmin@example.com',
             'password' => Hash::make('password'),
             'phone' => '+1-555-0101',
             'date_of_birth' => '1985-06-20',
@@ -166,7 +166,7 @@ class MultiOrganizationSeeder extends Seeder
             'id' => mt_rand(1000000000000000, 9999999999999999),
             'first_name' => 'Super',
             'last_name' => 'Admin',
-            'email' => 'superadmin@lavalite.org',
+            'email' => 'superadmin@example.com',
             'password' => Hash::make('password'),
             'phone' => '+1-555-0103',
             'date_of_birth' => '1990-05-15',
@@ -184,7 +184,7 @@ class MultiOrganizationSeeder extends Seeder
             'id' => mt_rand(1000000000000000, 9999999999999999),
             'first_name' => 'User',
             'last_name' => 'Admin',
-            'email' => 'useradmin@lavalite.org',
+            'email' => 'useradmin@example.com',
             'password' => Hash::make('password'),
             'phone' => '+1-555-0102',
             'date_of_birth' => '1987-09-15',
@@ -202,7 +202,7 @@ class MultiOrganizationSeeder extends Seeder
             'id' => mt_rand(1000000000000000, 9999999999999999),
             'first_name' => 'Regular',
             'last_name' => 'User',
-            'email' => 'user@lavalite.org',
+            'email' => 'user@example.com',
             'password' => Hash::make('password'),
             'phone' => '+1-555-0104',
             'date_of_birth' => '1992-08-22',
@@ -220,7 +220,7 @@ class MultiOrganizationSeeder extends Seeder
             'id' => mt_rand(1000000000000000, 9999999999999999),
             'first_name' => 'Client',
             'last_name' => 'User',
-            'email' => 'client@lavalite.org',
+            'email' => 'client@example.com',
             'password' => Hash::make('password'),
             'phone' => '+1-555-0105',
             'date_of_birth' => '1988-03-10',
@@ -288,11 +288,11 @@ class MultiOrganizationSeeder extends Seeder
         $this->command->info('2. TechStart Inc (slug: techstart)');
         $this->command->info('');
         $this->command->info('Users created:');
-        $this->command->info('- globaladmin@lavalite.org (GLOBAL ADMIN - admin role in both organizations, can manage global roles/permissions)');
-        $this->command->info('- useradmin@lavalite.org (USER ADMIN - user-admin role in both organizations, can manage users)');
-        $this->command->info('- superadmin@lavalite.org (SUPER ADMIN - superadmin role in both organizations)');
-        $this->command->info('- user@lavalite.org (USER - user role in both organizations)');
-        $this->command->info('- client@lavalite.org (CLIENT - client role in both organizations)');
+        $this->command->info('- globaladmin@example.com (GLOBAL ADMIN - admin role in both organizations, can manage global roles/permissions)');
+        $this->command->info('- useradmin@example.com (USER ADMIN - user-admin role in both organizations, can manage users)');
+        $this->command->info('- superadmin@example.com (SUPER ADMIN - superadmin role in both organizations)');
+        $this->command->info('- user@example.com (USER - user role in both organizations)');
+        $this->command->info('- client@example.com (CLIENT - client role in both organizations)');
         $this->command->info('');
         $this->command->info('Password for all users: password');
     }
