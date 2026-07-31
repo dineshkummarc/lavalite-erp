@@ -490,10 +490,10 @@ Contributions are welcome! Please follow these guidelines:
 
 For issues and questions:
 - GitHub Issues: [lavalite/core/issues](https://github.com/lavalite/core/issues)
-- Documentation: [docs.lavalite.org](https://docs.lavalite.org)
+- Documentation: [docs.example.com](https://docs.example.com)
 
 ---
 
 **Version:** 1.0.0  
 **Maintainer:** Lavalite Team  
-**Email:** team@lavalite.org
+**Email:** team@example.com

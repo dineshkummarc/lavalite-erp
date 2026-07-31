@@ -6,7 +6,7 @@
     "authors": [
         {
             "name": "Lavalite Team",
-            "email": "team@lavalite.org"
+            "email": "team@example.com"
         }
     ],
     "require": {
