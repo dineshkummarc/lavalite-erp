@@ -517,4 +517,4 @@ php artisan view:clear
 
 For deployment assistance:
 - GitHub Issues: https://github.com/lavalite/erp/issues
-- Email: team@lavalite.org
+- Email: team@example.com
